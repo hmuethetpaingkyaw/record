@@ -1,6 +1,5 @@
 import { body, check, oneOf } from "express-validator";
 
-
 export const Record_Create_Validation = [
   body("product").isLength(1),
   body("price").isLength(1),

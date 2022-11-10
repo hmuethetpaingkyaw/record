@@ -1,4 +1,4 @@
-import HeActivityController from "../../controllers/recordController";
+import CodeController from "../../controllers/codeController";
 import RecordController from "../../controllers/recordController";
 import { Validate_Request } from "../../controllers";
 import {
@@ -16,4 +16,6 @@ export default (routes) => {
   routes.get("/record/:id", RecordController.each);
   routes.delete("/record/:id", RecordController.delete);
   routes.put("/record/:id", RecordController.update);
+  routes.get("/code-check/:code", CodeController.index);
+  routes.post("/code-save/:code", CodeController.store);
 };
